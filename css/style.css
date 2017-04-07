@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&subset=latin-ext');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+html {
+	font-size: 10px;
+}
+
+.container { /*Container służy do budowania konstrukcji, nie wrzucamy do niego stylów*/
+	width: 100%;
+	max-width: 1060px;
+	margin: 0 auto;
+}
+
+.container:before, .container:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/*Header*/
+
+.header {
+	background-color: #000;
+}
+
+.header h1 {
+	color: #FFF;
+	font-size: 1.4rem;
+	font-weight: 600;
+	width: 50%;
+	float: left;
+	text-transform: uppercase;
+	padding: 15px 25px;
+}
+
+.header h1 span {
+	color: #27c7ab;
+	font-weight: 700;
+}
+
+nav {
+	width: 50%;
+	float: right;
+}
+
+.mainMenu {
+	list-style-type: none;
+	width: 100%;
+	text-align: right;
+}
+
+.mainMenu li {
+	display: inline-block;
+	position: relative;
+}
+
+.mainMenu a {
+	display: block; /* zeby można było dodać poźniej padding*/
+	color: #FFF;
+	padding: 15px 25px;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+/* rozwijane menu*/
+
+.subMenu { 
+	display: none;
+	position: absolute;
+	left: 0;
+	top: calc(100% + 20px); /*czyli 100% relatywnego plus 20px*/
+	background-color: #000;
+	text-align: left;
+	z-index: 9999;
+}
+
+.triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom: 20px solid #000;
+	top: -40px;
+	left: calc(50% - 20px); /*tutaj odejmuje te 20px ktore dodaliśmy w subMenu żeby zrobić przerwę*/
+}
+
+.hasChildren a:focus + .subMenu {  /*nie mogę dodać focus do czegoś co nie jest linkiem*/
+	display: block;
+	text-align: left;
+}
+
+#slider {
+	height: 135px 0;
+	background: linear-gradient(#fafafa, #d0cfd7);
+	position: relative;
+}
+
+#slider img {
+	width: 50%;
+	float: left;
+	margin: 30px 0;
+}
+
+#sliderText {
+	width: 50%;
+	float: right;
+	height: 100%;
+	padding: 100px 0;
+}
+
+#sliderText h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3rem;
+}
+
+#sliderText h2 span {
+	color: #27c7ab;
+	font-weight: 700;
+}
+
+#sliderText p {
+	padding-top: 20px;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.button {
+	border: none;
+	background-color: #27c7ab;
+	color: white;
+	font-size: 2rem;
+	padding: 15px 20px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	display: block;
+	width: 250px;
+	margin: 20px auto;
+}
+
+.prev {
+	position: absolute;
+	left: 40px;
+	top: calc(50% - 40px);
+	color: #27c7ab;
+	background-color: transparent;
+	border: none;
+	font-size: 7.8rem;
+}
+
+.next {
+	position: absolute;
+	right: 40px;
+	top: calc(50% - 40px);
+	color: #27c7ab;
+	background-color: transparent;
+	border: none;
+	font-size: 7.8rem;
+}
+
+/*3 sekcja - 2 zdjęcia i tekst*/
+
+#content .container {
+	width: 100%;
+	font-size: 0;
+}
+
+.one {
+	display: inline-block;
+	margin: 20px;
+	width: 32%;
+	min-height: 200px;
+	background-image: url('../images/box1_img.jpg');
+}
+
+.two {
+	display: inline-block;
+	margin: 20px;
+	width: 32%;
+	min-height: 200px;
+	background-image: url('../images/box2_img.jpg');
+}
+
+.three {
+	display: inline-block;
+	margin: 20px;
+	width: 32%;
+	min-height: 200px;
+	background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
