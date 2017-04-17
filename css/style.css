@@ -73,7 +73,7 @@ nav {
 
 /* rozwijane menu*/
 
-.subMenu { 
+.subMenu {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -169,46 +169,377 @@ nav {
 
 /*3 sekcja - 2 zdjęcia i tekst*/
 
-#content .container {
+#content article {
+  float: left;
+  height: 300px;
+  width: 33.3332%;
+  margin: 20px 0;
+}
+
+
+#content article:before, #content article:after  {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+article div {
+  min-height: 250px;
+  padding-top: 1px;
+  border:1px solid #d0cfd7;
+}
+
+#content article h3 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 20px 0;
+  padding-left: 10px;
+  margin: 0;
+  background-color: rgba(255,255,255,.3);
+  margin-top: 50%;
+}
+
+#content article h3 span {
+  border-bottom: 5px solid #27c7ab;
+  padding-right: 20px;
+}
+
+article:first-child div {
+  background-image: url(../images/box1_img.jpg);
+  background-size: cover;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+article:nth-child(2) div {
+  background-image: url(../images/box2_img.jpg);
+  background-size: cover;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#content article:nth-child(3) div h3 {
+  margin: 0;
+}
+
+article p {
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+
+/*3 sekcja - cennik*/
+
+#prices {
+	background-color: #f1f1f1;
+	height: 680px;
+}
+
+.prices-head {
 	width: 100%;
+	height: 100px;
+}
+
+.prices-head span {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	color: #818181;
+	font-weight: 500;
+	border-bottom: 5px solid #27c7ab;
+  	padding-right: 260px;
+  	line-height: 100px;
+}
+
+.offers {
+	font-size: 0;
+	margin-top: 50px;
+}
+
+.left-table, .middle-table, .right-table  {
+	height: 450px;
+	width: 31%;
+	border: 3px solid #d0cfd7;
+	position: relative;
+	display: inline-block;
+	background-color: #f9f9f9;
+}
+
+.big-circle {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 3px solid #d0cfd7;
+	top: -45px;
+	left: 135px;
+	background-color: #f9f9f9;
+}
+
+.middle-table .big-circle {
+	background-color: #27c7ab;
+	border: 3px solid #27c7ab;
+}
+
+.small-circle {
+	position: absolute;
+	background-color: #c1c1c1;
+	width: 30px;
+	height: 30px;
+	top: -29.5px;
+	left: 150.5px;
+	border-radius: 50%;
+	border: 1px solid #d0cfd7;
+}
+
+.middle-table .small-circle {
+	background-color: #f7f9f9;
+	border: 1px solid #f7f9f9;
+}
+
+.middle-table {
+	margin: 0 3.5%;
+	border: 3px solid #27c7ab;
+	background-color: #27c7ab;
+}
+
+.title {
+	height: 60px;
+}
+
+.title p {
+	font-size: 1.9rem;
+	color: #27c7ab;
+	text-align: center;
+	line-height: 60px;
+	font-weight: 600;
+}
+
+.middle-table .title p {
+	color: #f7f9f9;
+}
+
+.price-circle {
+	border: 3px solid #d0cfd7;
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	background-color: #fff;
+	left: 95px;
+}
+
+#middle {
+	border: 3px solid #27c7ab;
+}
+
+.price {
+	font-size: 4rem;
+	color: #c0c0c0;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 900;
+	margin-top: 25px;
+}
+
+.middle-table .price {
+	color: #27c7ab;
+}
+
+.price span {
+	font-size: 1.8rem;
+	vertical-align: top;
+}
+
+.time {
+	font-size: 1.8rem;
+	color: #c0c0c0;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 600;
+}
+
+.middle-table .time {
+	color: #27c7ab;
+}
+
+.list {
+	margin: 160px 0 40px 0;
+	height: 120px;
+}
+
+.options {
+	list-style-type: none;
+}
+
+.options li {
+	font-size: 2rem;
+	color: #b6b6b6;
+	text-align: center;
+	line-height: 30px;
+}
+
+.options li:nth-child(2n+1) {
+	background-color: #e3e3e3;
+}
+
+.options li:nth-child(2n+2) {
+	background-color: #f1f1f1;
+}
+
+.middle-table .options li:nth-child(2n+1) {
+	background-color: #fff;
+}
+
+.button-join {
+	height: 60px;
+	width: 100%;
+	text-align: center;
+}
+
+.button-join a {
+	background-color: #00d1ad;
+	font-size: 1.5rem;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	border-radius: 10px;
+}
+
+.middle-table .button-join a {
+	background-color: #fff;
+	color: #27c7ab;
+}
+
+
+/*Formularz*/
+
+#contact {
+	background-color: #fff;
+	height: 550px;
 	font-size: 0;
 }
 
-.one {
+.left-form {
+	width: 65%;
 	display: inline-block;
-	margin: 20px;
-	width: 32%;
-	min-height: 200px;
-	background-image: url('../images/box1_img.jpg');
+	height: 400px;
 }
 
-.two {
+.right-form {
+	width: 35%;
 	display: inline-block;
-	margin: 20px;
-	width: 32%;
-	min-height: 200px;
-	background-image: url('../images/box2_img.jpg');
+	height: 400px;
+	vertical-align: top;
+	text-align: center;
 }
 
-.three {
+.left-form input, textarea {
+	border: 1px solid #27c7ab;
+	width: 90%;
+	line-height: 60px;
+	margin-bottom: 20px;
+	font-size: 2rem;
+	padding: 5px 5px;
+}
+
+.left-form textarea {
+	height: 180px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #f1f1f1;
+	font-size: 3.5rem;
+	padding: 5px 5px;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color: #f1f1f1;
+	font-size: 3.5rem;
+	padding: 5px 5px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    display:inline-block;
+	margin-top: 15px;
+    width:350px;
+    height:50px;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+	padding-left: 10px;
+    width:291px;
+    height:50px;
+	vertical-align: top;
+}
+
+input[type="checkbox"] + label i.tick {
+	width: 50px;
+	height: 50px;
 	display: inline-block;
-	margin: 20px;
-	width: 32%;
-	min-height: 200px;
-	background-color: green;
+	border: 1px solid #e0e0e0;
+}
+
+input[type="checkbox"]:checked + label i.tick {
+	background:url(../images/form_ok.jpg) center center no-repeat;
+}
+
+.right-form label {
+	color: #e0e0e0;
+	font-size: 2rem;
+	text-align: left;
+}
+
+.right-form .button {
+	font-weight: 900;
+	font-size: 3.5rem;
+	width: 350px;
 }
 
 
+/*Footer*/
 
+footer {
+	height: 100px;
+	font-size: 0;
+}
 
+footer .container {
+	line-height: 100px;
+}
 
+.footer-left {
+	display: inline-block;
+	width: 65%;
+}
 
+.footer-middle {
+	display: inline-block;
+	width: 20%;
+}
 
+.footer-right {
+	display: inline-block;
+	width: 15%;
+}
 
+.footer-left p {
+	font-size: 1.5rem;
+	color: #c1c1c1;
+}
 
+.footer-right p {
+	font-size: 2rem;
+	color: #c1c1c1;
+	font-weight: 600;
+}
 
-
-
-
-
-
+.footer-right p span {
+	font-size: 2rem;
+	color: #c1c1c1;
+	font-weight: 900;
+}
