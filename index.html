@@ -27,7 +27,11 @@
 	</header>
 	<section id="slider">
 		<div class="container">
-			<img src="images/black_chair.png" alt="chair">
+			<ul>
+				<li class="sliderPic"><img src="images/black_chair.png" alt="black chair"></li>
+				<li class="sliderPic"><img src="images/orange.png" alt="orange chair"></li>
+				<li class="sliderPic"><img src="images/red.png" alt="red chair"></li>
+			</ul>
 			<section id="sliderText">
 				<h2>Sit <span>on</span> our <span>chair</span></h2>
 				<p>
@@ -46,13 +50,13 @@
 	<section id="content">
 		<div class="container">
 			<article class="">
-          		<div class="">
-            		<h3><span>Chair CLARE</span></h3>
+          		<div class="pic">
+            		<h3 class="shadow"><span>Chair CLARE</span></h3>
          		</div>
 		    </article>
         	<article class="">
-         		<div class="">
-            		<h3><span>Chair MARGARITA</span></h3>
+         		<div class="pic">
+            		<h3 class="shadow"><span>Chair MARGARITA</span></h3>
           		</div>
         	</article>
         	<article class="">
@@ -141,6 +145,82 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="application ">
+		<div class="container">
+			<div class="main_width">
+				<section class="choice_part inline">
+					<header>
+						<h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+						<span class="green_bell"></span>
+					</header>
+
+					<div class="form">
+						<div class="drop_down_list" id="kind">
+							<span class="list_label">Wybierz rodzaj</span>
+							<span class="list_arrow"></span>
+							<ul class="list_panel">
+								<li data-price="100">Clair</li>
+								<li data-price="150">Margarita</li>
+								<li data-price="200">Selena</li>
+							</ul>
+						</div>
+						<div class="drop_down_list" id="color">
+							<span class="list_label">Wybierz kolor</span>
+							<span class="list_arrow"></span>
+							<ul class="list_panel">
+								<li data-price="50">Czerwony</li>
+								<li data-price="0">Czarny</li>
+								<li data-price="100">Pomarańczowy</li>
+							</ul>
+						</div>
+						<div class="drop_down_list" id="fabric">
+							<span class="list_label">Wybierz materiał</span>
+							<span class="list_arrow"></span>
+							<ul class="list_panel">
+								<li data-price="0">Tkanina</li>
+								<li data-price="50">Skóra</li>
+							</ul>
+						</div>
+						<div class="checkbox check-box">
+							<input type="checkbox" id="transport" data-price="200">
+							<label for="transport">Transport</label>
+						</div>
+					</div>
+				</section>
+
+				<section class="image_part inline">
+					<img src="images/red_chair.png">
+				</section>
+
+				<section class="summary_part inline">
+					<header class="align_right">
+						<h3>PODSUMOWANIE</h3>
+						<span class="green_bell"></span>
+					</header>
+
+					<div class="summary_panel">
+						<div class="panel_left" id="summary-left">
+							<h4 class="title" id="summary-kind">Twój fotel</h4>
+							<span class="color" id="summary-color"></span>
+							<span class="pattern" id="summary-fabric"></span>
+							<span class="transport" id="summary-transport"></span>
+						</div>
+						<div class="panel_right" id="summary-right">
+							<h4 class="title value" id="summary-kind-value"></h4>
+							<span class="color value" id="summary-color-value"></span>
+							<span class="pattern value" id="summary-fabric-value"></span>
+							<span class="transport value" id="summary-transport-value"></span>
+						</div>
+						<div class="sum_label">SUMA</div>
+						<div class="sum"><strong id="sum"></strong></div>
+					</div>
+					<a href="" class="green_button">Zamawiam</a>
+				</section>
+			</div>
+		</div>
+	</section>
+
 	<section id="contact">
 		<div class="container">
 			<div class="prices-head">
@@ -185,4 +265,5 @@
 		</div>
 	</footer>
 </body>
+<script src="js/app.js"></script>
 </html>
